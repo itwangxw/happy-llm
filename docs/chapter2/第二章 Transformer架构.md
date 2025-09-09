@@ -119,7 +119,7 @@ $$
 
 这也就是注意力机制的核心计算公式了。
 <div align="center">
-  <img src="../../images/self_attention_.pic.jpg" alt="图片描述" width="90%"/>
+  <img src="../../images/self_attention_.pic.jpg" alt="图片描述" width="40%"/>
   <p>自注意力</p>
 </div>
 

@@ -135,7 +135,7 @@ def attention(query, key, value, dropout=None):
     # 获取键向量的维度，键向量的维度和值向量的维度相同
     d_k = query.size(-1) 
     # 计算Q与K的内积并除以根号dk
-    # transpose——相当于转置
+    # transpose——相当于转置(行列互换)
     scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
     # Softmax
     p_attn = scores.softmax(dim=-1)

@@ -118,6 +118,10 @@ attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
 $$
 
 这也就是注意力机制的核心计算公式了。
+<div align="center">
+  <img src="../images/" alt="图片描述" width="90%"/>
+  <p>图2.2 卷积神经网络</p>
+</div>
 
 ### 2.1.3 注意力机制的实现
 

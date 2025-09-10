@@ -161,6 +161,9 @@ def attention(query, key, value, dropout=None):
 
 ​但在 Transformer 的 Encoder 结构中，使用的是 注意力机制的变种 —— 自注意力（self-attention，自注意力）机制。所谓自注意力，即是计算本身序列中每个元素对其他元素的注意力分布，即在计算过程中，Q、K、V 都由同一个输入通过不同的参数矩阵计算得到。在 Encoder 中，Q、K、V 分别是输入对参数矩阵 $W_q、W_k、W_v$ 做积得到，从而拟合输入语句中每一个 token 对其他所有 token 的关系。
 ```python
+https://www.zhihu.com/question/592626839/answer/3304714001
+https://jalammar.github.io/illustrated-transformer/
+
 我们把每个 token 的 Embedding 向量分别做三次线性投影（或称为线性变换），也就是说它与三个具有不同权重的矩阵Wq,Wk,Wv分别相乘得到 Q、K、V三个矩阵。
 
 而 Wq、Wk、Wv 是 Transformer 大模型在预训练阶段时，通过神经网络反向传播来训练出来的权重矩阵（注意，这里提到的“权重”，是指神经网络中的连接权重，与Attention中token之间的语义关联权重不是一个意思），这三个矩阵是 Transformer 大模型当初通过百万级的训练语料在 8 块 NVIDIA P100 GPU 上运算 3.5 天后的训练所得（当然，这是2017年 Google 团队首次提出 Transformer时的事情了，今天许多的多模态大模型中的 Transformer 架构在训练时往往采用至少百亿计的语料训练集，同时在成千上万块至少是 A100 GPU 上，训练十几天才会完成，以后这个训练成本只可能是越来越巨大）。

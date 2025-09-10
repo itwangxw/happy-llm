@@ -173,6 +173,9 @@ https://jalammar.github.io/illustrated-transformer/
 ```python
 # attention 为上文定义的注意力计算函数
 attention(x, x, x)
+
+这里应该是强调最原始的输入矩阵是同一个,然后经过权重矩阵才分别变换成Q, K, V矩阵.
+attention(XW_Q,XW_K,XW_V)
 ```
 
 ### 2.1.5 掩码自注意力

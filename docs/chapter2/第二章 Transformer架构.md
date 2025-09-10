@@ -1,4 +1,4 @@
-第二章 Transformer 架构
+# 第二章 Transformer 架构
 
 ## 2.1 注意力机制
 
@@ -231,7 +231,7 @@ scores = F.softmax(scores.float(), dim=-1).type_as(xq)
 
 ### 2.1.6 多头注意力
 <div align="center">
-  <img src="../../images/multi_head_attention_desc.jpg" alt="图片描述" width="100%"/>
+  <img src="../../images/multi_head_attention_desc.jpg" alt="图片描述" width="80%"/>
   <p>多头自注意力</p>
 </div>
 

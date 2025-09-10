@@ -230,10 +230,9 @@ scores = F.softmax(scores.float(), dim=-1).type_as(xq)
 通过做求和，上三角区域（也就是应该被遮蔽的 token 对应的位置）的注意力分数结果都变成了 `-inf`，而下三角区域的分数不变。再做 Softmax 操作，`-inf` 的值在经过 Softmax 之后会被置为 0，从而忽略了上三角区域计算的注意力分数，从而实现了注意力遮蔽。
 
 ### 2.1.6 多头注意力
-<img width="1378" height="1044" alt="image" src="https://github.com/user-attachments/assets/2127c416-bf0e-4f2c-91bc-a918f6500a20" width="50%"/>
 <div align="center">
-  <img src="../../images/multi_head_attention_desc.jpg" alt="图片描述" width="40%"/>
-  <p>自注意力</p>
+  <img src="../../images/multi_head_attention_desc.jpg" alt="图片描述" width="100%"/>
+  <p>多头自注意力</p>
 </div>
 
 

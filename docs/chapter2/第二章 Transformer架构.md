@@ -1,4 +1,4 @@
-# 第二章 Transformer 架构
+![multi_head_attention_desc](https://github.com/user-attachments/assets/296f41e1-7402-4869-9610-4b5cefa88293)# 第二章 Transformer 架构
 
 ## 2.1 注意力机制
 
@@ -231,6 +231,10 @@ scores = F.softmax(scores.float(), dim=-1).type_as(xq)
 
 ### 2.1.6 多头注意力
 <img width="1378" height="1044" alt="image" src="https://github.com/user-attachments/assets/2127c416-bf0e-4f2c-91bc-a918f6500a20" width="50%"/>
+<div align="center">
+  <img src="../../images/multi_head_attention_desc.jpg" alt="图片描述" width="40%"/>
+  <p>自注意力</p>
+</div>
 
 
 注意力机制可以实现并行化与长期依赖关系拟合，但一次注意力计算只能拟合一种相关关系，单一的注意力机制很难全面拟合语句序列里的相关关系。因此 Transformer 使用了多头注意力机制（Multi-Head Attention），即同时对一个语料进行多次注意力计算，每次注意力计算都能拟合不同的关系，将最后的多次结果拼接起来作为最后的输出，即可更全面深入地拟合语言信息。

@@ -1,4 +1,4 @@
-![multi_head_attention_desc](https://github.com/user-attachments/assets/296f41e1-7402-4869-9610-4b5cefa88293)# 第二章 Transformer 架构
+第二章 Transformer 架构
 
 ## 2.1 注意力机制
 
